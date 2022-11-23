@@ -7,7 +7,7 @@ interface UpdateProps {
     created_on: string;
 }
 
-interface AgencyProps {
+interface LaunchesProps {
     id:	string;
     url: string;
     slug: string;
@@ -66,4 +66,11 @@ interface AgencyProps {
     agency_launch_attempt_count_year: number;
 }
 
-export type { AgencyProps };
+interface LaunchesResult {
+    count: string;
+    next: string;
+    previous: string;
+    results: LaunchesProps[];
+}
+
+export type { LaunchesProps, LaunchesResult };

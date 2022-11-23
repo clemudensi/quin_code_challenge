@@ -1,15 +1,19 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { LaunchesContainer, RocketFilter } from 'components';
+import { LaunchesContainer } from 'components';
+import { LaunchDateProvider } from 'context';
+import { RocketLaunchMap } from 'pages';
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 function App() {
   return (
       <QueryClientProvider client={queryClient}>
-        <LaunchesContainer>
-            <RocketFilter />
-        </LaunchesContainer>
+        <LaunchDateProvider>
+            <LaunchesContainer>
+                <RocketLaunchMap />
+            </LaunchesContainer>
+        </LaunchDateProvider>
       </QueryClientProvider>
   );
 }

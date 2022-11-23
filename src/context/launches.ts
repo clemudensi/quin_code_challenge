@@ -1,6 +1,6 @@
 import constate from 'constate';
-import { userDateInput } from 'hooks';
+import { useUserDateInput } from 'hooks';
 
-const [LaunchDateProvider, useDateTimeContext] = constate(userDateInput);
+const [LaunchDateProvider, useDateTimeContext] = constate(useUserDateInput);
 
 export { LaunchDateProvider, useDateTimeContext };
